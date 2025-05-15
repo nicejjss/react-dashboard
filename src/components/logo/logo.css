@@ -1,0 +1,19 @@
+#logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#logo-img {
+  border: 2px solid red;
+  border-radius: 4px;
+}
+
+#logo-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.visible {
+  display: inline-block;
+}

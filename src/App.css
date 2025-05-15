@@ -1,0 +1,6 @@
+#main {
+  display: flex;
+  background-color: var(--background-color);
+  height: fit-content;
+  min-height: 100vh;
+}
