@@ -1,0 +1,11 @@
+#content-archivement {
+    padding: 2.063rem 3.125rem;
+    background-color: var(--secondary-text-color);
+    border-radius: 35px;
+    margin-bottom: 2.5rem;
+}
+
+#archivement-list {
+    display: flex;
+    justify-content: space-between;
+}

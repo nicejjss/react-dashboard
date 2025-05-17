@@ -1,0 +1,18 @@
+#header {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-section);
+    padding-top: 2.25rem;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transition: all 0.2s ease-out;
+}
+
+#header.header-close {
+    padding-left: 0;
+    padding-right: 0;
+}

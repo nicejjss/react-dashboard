@@ -1,0 +1,26 @@
+#infor {
+    margin-top: auto;
+    margin-bottom: 5rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#infor-img {
+    width: 37px;
+    border-radius: 50%;
+    margin: 0;
+}
+
+#infor-infor {
+    font-size: 0.875rem;
+    margin-left: 0.5em;
+}
+
+#infor-infor-name {
+    font-weight: bold;
+}
+
+#infor-arrow {
+    margin-right: 0;
+}

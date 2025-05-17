@@ -1,19 +1,16 @@
-#logo {
+#logo-link {
   display: flex;
   align-items: center;
-  gap: 10px;
+  margin-bottom: 3.25rem;
+  margin-left: 0;
 }
 
 #logo-img {
-  border: 2px solid red;
-  border-radius: 4px;
+  margin: 0;
 }
 
 #logo-title {
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
-.visible {
-  display: inline-block;
+  font-size: 1.625rem;
+  font-weight: bolder;
+  margin: 0 5%;
 }

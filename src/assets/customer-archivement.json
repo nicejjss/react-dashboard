@@ -1,0 +1,8 @@
+{
+    "title": "Total Customers",
+    "icon": "./src/assets/icons/archivement/customers.svg",
+    "type": 1,
+    "value": "5423",
+    "rate": 12,
+    "rateUp": 1
+}
