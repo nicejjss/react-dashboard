@@ -14,8 +14,8 @@ function App() {
   return (
     <MenuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
       <div className="app" id="main">
-        <Header width={isMenuOpen ? menuWidth + "vw" : menuCloseWidth + "vw"} setMenuOpen={setIsMenuOpen}/>
-        <Content marginLeft={isMenuOpen ? menuWidth + "vw" : menuCloseWidth + "vw"} setMenuOpen={setIsMenuOpen}/>
+        <Header width={isMenuOpen ? menuWidth + "vw" : menuCloseWidth + "vw"}/>
+        <Content marginLeft={isMenuOpen ? menuWidth + "vw" : menuCloseWidth + "vw"}/>
       </div>
     </MenuContext.Provider>
   );

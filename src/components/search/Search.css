@@ -1,5 +1,4 @@
-form {
-    background-color: var(--secondary-text-color);
+.input-search {
     display: flex;
     align-items: center;
     padding: 0.5rem 0.75rem;
@@ -10,4 +9,5 @@ form {
     margin-left: 0.5rem;
     border: none;
     outline: none;
+    background-color: transparent;
 }

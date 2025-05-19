@@ -2,8 +2,12 @@ import React from 'react';
 import './Content.css';
 import ContentHeader from '../content-header/ContentHeader';
 import ContentArchivement from '../content-archivement/ContentArchivement';
+import { MenuContext } from '../../Contexts';
+import { useContext } from 'react';
+import ContentData from '../content-data/ContentData';
 
-const Content = ({ marginLeft, setMenuOpen }) => {
+const Content = ({ marginLeft }) => {
+  const { setIsMenuOpen } = useContext(MenuContext);
 
   const items = [
     { id: 1, title: 'Item 1' },
@@ -13,9 +17,10 @@ const Content = ({ marginLeft, setMenuOpen }) => {
 
   return (
     <section id="content" style={{ marginLeft: marginLeft }}
-      onClick={() => setMenuOpen(false)}>
+      onClick={() => setIsMenuOpen(false)}>
       <ContentHeader />
       <ContentArchivement />
+      <ContentData />
     </section>
   )
 }

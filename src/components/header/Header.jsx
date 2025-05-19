@@ -6,7 +6,7 @@ import Update from '../update/Update';
 import Infor from '../infor/Infor';
 import { MenuContext } from '../../Contexts';
 
-const Header = ({ width, setMenuOpen }) => {
+const Header = ({ width }) => {
   const { isMenuOpen, setIsMenuOpen } = useContext(MenuContext);
 
   return (
@@ -15,7 +15,7 @@ const Header = ({ width, setMenuOpen }) => {
       onMouseEnter={() => setIsMenuOpen(true)}
       className={`${isMenuOpen ? "header-open" : "header-close"}`}
       style={{ width: width }}
-      onClick={() => setMenuOpen(true)}>
+      onClick={() => setIsMenuOpen(true)}>
       <Logo/>
       <Nav/>
       {isMenuOpen ? <Update/> : null}

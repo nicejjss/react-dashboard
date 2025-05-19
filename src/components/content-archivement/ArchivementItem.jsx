@@ -1,9 +1,9 @@
 import React from 'react';
 import './ArchivementItem.css';
 
-const ArchivementItem = ({ archivement }) => {
+const ArchivementItem = ({ archivement, itemIndex }) => {
   return (
-    <li className="archivement-item">
+    <li className={`archivement-item ${itemIndex !== 0 ? 'seperate-left' : ''}`}>
       <img className="archivement-item-img" src={archivement.icon}
         alt={`${archivement.title} Archivement`} />
       <section className="archivement-item-detail">

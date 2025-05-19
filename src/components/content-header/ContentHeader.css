@@ -18,3 +18,11 @@
     margin-left: auto;
     margin-right: 0;
 }
+
+#content-header-search{
+    margin-right: 0;
+}
+
+.content-input {
+    background-color: var(--secondary-text-color);
+}

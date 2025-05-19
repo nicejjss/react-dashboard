@@ -13,7 +13,7 @@ const ContentArchivement = () => {
     <section id="content-archivement" className="box-shadow">
       <ul id="archivement-list" type="none">
         {achievements.map((achievement, index) => (
-          <ArchivementItem key={index} archivement={achievement} />
+          <ArchivementItem key={index} archivement={achievement} itemIndex={index} />
         ))}
       </ul>
     </section>

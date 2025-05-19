@@ -1,13 +1,21 @@
 import './Search.css';
 import searchIcon from '../../assets/icons/search.svg';
+import React from 'react';
 
-function Search({ name }) {
+const Search = React.memo(({ name, value, onChange }) => {
     return (
-        <form id={name + "-search"} className="search-form">
+        <section className={`${name}-input input-search`}>
             <img id="search-icon" src={searchIcon} alt="Search Icon" />
-            <input type="text" className="search-input" placeholder="Search" />
-        </form>
+            <input 
+                type="text" 
+                name={name} 
+                className="search-input" 
+                placeholder="Search" 
+                value={value}
+                onChange={onChange ? (e) => onChange(e.target.value) : undefined}
+            />
+        </section>
     )
-}
+});
 
 export default Search;
