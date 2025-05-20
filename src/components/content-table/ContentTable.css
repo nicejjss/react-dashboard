@@ -1,16 +1,16 @@
-table {
+#content-data-table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 1.875rem;
 }
 
-thead {
+#content-data-table thead {
     color: var(--placeholder-color);
     text-align: left;
     font-size: 14px;
 }
 
-thead::after {
+#content-data-table thead::after {
     content: '';
     position: absolute;
     border-bottom: 1px solid #e5e7eb;
@@ -18,13 +18,13 @@ thead::after {
     right: 0;
 }
 
-th,
-td {
+#content-data-table th,
+#content-data-table td {
     padding: 16px 0;
     white-space: nowrap;
 }
 
-tbody tr {
+#content-data-table tbody tr {
     border-top: 1px solid #e5e7eb;
 }
 

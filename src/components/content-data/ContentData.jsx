@@ -2,18 +2,31 @@ import React, { useState, useCallback } from 'react';
 import './ContentData.css';
 import Search from '../search/Search';
 import ContentTable from '../content-table/ContentTable';
+import ContentFooter from '../contentfooter/ContentFooter';
 
 const ContentData = () => {
+  const [data, setData] = useState({
+    'data': [],
+    'total': 0,
+    'page': 1,
+    'limit': 10,
+    'totalPages': 0,
+  });
+  const [page, setPage] = useState(1);
   const options = ["Newest", "Oldest", "Inactive", "Active"];
   const [filteredData, setFilteredData] = useState({
     'name': ''
   });
 
   const handleSearchChange = useCallback((value) => {
-    setFilteredData(prevData => ({
-      ...prevData,
-      name: value
-    }));
+    const search = setTimeout(() => {
+      setFilteredData(prevData => ({
+        ...prevData,
+        name: value
+      }));
+    }, 3000);
+
+    return () => clearTimeout(search);
   }, []);
 
   return (
@@ -26,7 +39,6 @@ const ContentData = () => {
         <form id="customer-search" className="margin-0">
           <Search 
             name="customer" 
-            value={filteredData.name}
             onChange={handleSearchChange}
           />
           <label id="form-filter" htmlFor="filter-select">
@@ -42,7 +54,8 @@ const ContentData = () => {
           </label>
         </form>
       </section>
-      <ContentTable filteredData={filteredData}/>
+      <ContentTable filteredData={filteredData} data={data} setData={setData} page={page}/>
+      <ContentFooter data={data} setData={setData} page={page} setPage={setPage}/>
     </div>
   )
 }

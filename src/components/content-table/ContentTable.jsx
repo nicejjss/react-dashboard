@@ -1,45 +1,24 @@
 import './ContentTable.css';
 import ContentRow from './ContentRow';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { RepositoryFactory } from '../../assets/data/Repository/RepositoryFactory';
-import PropTypes from 'prop-types';
 
-function ContentTable({ filteredData }) {
+function ContentTable({ filteredData, data , setData, page}) {
 
-  const [data, setData] = useState({
-    'data': [],
-    'total': 0,
-    'page': 1,
-    'limit': 10
-  });
   const repository = RepositoryFactory.getInstance().getRepository();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const users = await repository.getUsers();
+        const users = await repository.getUsers(filteredData.name, page);
         setData(users);
       } catch (error) {
-        console.error('Error fetching users:', error);
+        console.error('Error fetching filtered data:', error);
       }
     };
+
     fetchData();
-  }, []);
-
-  useEffect(() => {
-    const timeoutId = setTimeout(async () => {
-      if (filteredData.name) {
-        try {
-          const users = await repository.getUsers(filteredData.name);
-          setData(users);
-        } catch (error) {
-          console.error('Error fetching filtered data:', error);
-        }
-      }
-    }, 3000);
-
-    return () => clearTimeout(timeoutId);
-  }, [filteredData]);
+  }, [filteredData, page]);
 
   return (
     <table id="content-data-table">
@@ -61,11 +40,5 @@ function ContentTable({ filteredData }) {
                 </table>
   )
 }
-
-ContentTable.propTypes = {
-  filteredData: PropTypes.shape({
-    name: PropTypes.string
-  }).isRequired
-};
 
 export default ContentTable;

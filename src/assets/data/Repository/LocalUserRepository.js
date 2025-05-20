@@ -9,10 +9,8 @@ export class LocalUserRepository extends FetchRepository {
 
     async getUsers(name='', page=this.PAGE) {
         try {
-            // If we don't have local data yet, fetch it first
-            if (this.localData.length === 0) {
-                this.localData = await super.fetchUsers(page, name);
-            }
+            // Always fetch fresh data when page changes or search changes
+            this.localData = await super.fetchUsers(page, name);
             page = page ?? this.PAGE;
             let limit = this.LIMIT;
 
