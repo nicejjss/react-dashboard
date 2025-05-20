@@ -2,6 +2,7 @@ import './ContentTable.css';
 import ContentRow from './ContentRow';
 import { useEffect, useState } from 'react';
 import { RepositoryFactory } from '../../assets/data/Repository/RepositoryFactory';
+import PropTypes from 'prop-types';
 
 function ContentTable({ filteredData }) {
 
@@ -53,12 +54,18 @@ function ContentTable({ filteredData }) {
                         </tr>
                     </thead>
                     <tbody id="content-data-body">
-                      {data.data.map((item, index) => (
-                        <ContentRow key={index} item={item} />
+                      {data.data.map((item) => (
+                        <ContentRow key={item.email} item={item} />
                       ))}
                     </tbody>
                 </table>
   )
 }
+
+ContentTable.propTypes = {
+  filteredData: PropTypes.shape({
+    name: PropTypes.string
+  }).isRequired
+};
 
 export default ContentTable;

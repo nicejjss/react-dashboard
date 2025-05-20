@@ -14,7 +14,7 @@ const ContentData = () => {
       ...prevData,
       name: value
     }));
-  }, [filteredData]);
+  }, []);
 
   return (
     <div id="content-data">
@@ -32,8 +32,8 @@ const ContentData = () => {
           <label id="form-filter" htmlFor="filter-select">
             <span>Sort by:</span>
             <select name="filter" id="filter-select" className="select-input">
-              {options.map((option, index) => (
-                <option key={index} value={option}>{option}</option>
+              {options.map((option) => (
+                <option key={option} value={option}>{option}</option>
               ))}
             </select>
             <div className="filter-icon-wrapper">

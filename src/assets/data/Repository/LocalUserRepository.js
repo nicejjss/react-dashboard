@@ -7,13 +7,13 @@ export class LocalUserRepository extends FetchRepository {
         this.localData = []; // Store all data locally
     }
 
-    async getUsers(page, name) {
+    async getUsers(name='', page=this.PAGE) {
         try {
             // If we don't have local data yet, fetch it first
             if (this.localData.length === 0) {
                 this.localData = await super.fetchUsers(page, name);
             }
-            page = page ? page : this.PAGE;
+            page = page ?? this.PAGE;
             let limit = this.LIMIT;
 
             // Calculate pagination
@@ -40,34 +40,6 @@ export class LocalUserRepository extends FetchRepository {
                 totalPages: 0,
                 page: page,
                 limit: limit
-            };
-        }
-    }
-
-    async getUserByName(name) {
-        try {
-            // If we don't have local data yet, fetch it first
-            if (this.localData.length === 0) {
-                this.localData = await super.fetchUsers();
-            }
-            const filteredData = this.localData.filter(item => 
-                item.name.toLowerCase().includes(name.toLowerCase())
-            );
-
-            return this.formatResult(
-                filteredData.map(item => CustomerDTO.convertLocalToDTO(item)),
-                filteredData.length,
-                this.PAGE,
-                this.LIMIT
-            );
-        } catch (error) {
-            console.error('Error in LocalUserRepository:', error);
-            return {
-                data: [],
-                total: 0,
-                totalPages: 0,
-                page: this.PAGE,
-                limit: this.LIMIT
             };
         }
     }

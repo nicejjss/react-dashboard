@@ -6,9 +6,10 @@ export class FetchRepository extends IRepository{
     LIMIT = pageLimit;
 
     fetchUsers(page, name) {
-        page = page ? page : this.PAGE;
+        page = page ?? this.PAGE;
         const url = config[databaseSource].location;
-        const paginationParams = page ? `?_page=${page}&_limit=${this.LIMIT}${name ? `&name=${name}` : ''}` : '';
+        const nameParam = name ? `&name=${name}` : '';
+        const paginationParams = page ? `?_page=${page}&_limit=${this.LIMIT}${nameParam}` : '';
         return fetch(url + paginationParams)
             .then(response => response.json())
             .then(data => data)
@@ -31,8 +32,8 @@ export class FetchRepository extends IRepository{
             data: data,
             total: total,
             totalPages: Math.ceil(total / this.LIMIT),
-            page: page ? page : this.PAGE,
-            limit: limit ? limit : this.LIMIT
+            page: page ?? this.PAGE,
+            limit: limit ?? this.LIMIT
         }
     }
 }

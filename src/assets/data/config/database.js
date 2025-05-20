@@ -4,7 +4,7 @@ export const pageNumber = import.meta.env.VITE_PAGE_NUMBER;
 
 export const config = {
     'local': {
-        location: './assets/data/customers.json',
+        location: './src/assets/data/customers.json',
     },
 
     'remote': {
