@@ -1,7 +1,7 @@
 import React from 'react';
 import './ContentFooter.css';
-import DataSummary from '../data-summary/DataSummary';
-import DataPagination from '../data-pagination/DataPagination';
+import DataSummary from '../../data-summary/DataSummary';
+import DataPagination from '../../data-pagination/DataPagination';
 
 const ContentFooter = ({ data, page, setPage }) => {
 

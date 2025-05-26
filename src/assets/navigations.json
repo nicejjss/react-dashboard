@@ -2,32 +2,32 @@
     "navigations": [
         {
             "title": "Dashboard",
-            "icon": "./src/assets/icons/dashboard.svg",
+            "icon": "/src/assets/icons/dashboard.svg",
             "link": "/"
         },
         {
             "title": "Product",
-            "icon": "./src/assets/icons/product.svg",
+            "icon": "/src/assets/icons/product.svg",
             "link": "/product"
         },
         {
             "title": "Customers",
-            "icon": "./src/assets/icons/customers.svg",
+            "icon": "/src/assets/icons/customers.svg",
             "link": "/customers"
         },
         {
             "title": "Income",
-            "icon": "./src/assets/icons/income.svg",
+            "icon": "/src/assets/icons/income.svg",
             "link": "/income"
         },
         {
             "title": "Promote",
-            "icon": "./src/assets/icons/promote.svg",
+            "icon": "/src/assets/icons/promote.svg",
             "link": "/promote"
         },
         {
             "title": "Help",
-            "icon": "./src/assets/icons/help.svg",
+            "icon": "/src/assets/icons/help.svg",
             "link": "/help"
         }
     ]

@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './components/header/Header';
-import Content from './components/content/Content';
+import Content from './components/customers/content/Content';
 import './App.css';
 import { useState } from 'react';
 import { MenuContext } from './Contexts';

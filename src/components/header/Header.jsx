@@ -12,10 +12,10 @@ const Header = ({ width }) => {
   return (
     <header 
       id="header"
-      onMouseEnter={() => setIsMenuOpen(true)}
       className={`${isMenuOpen ? "header-open" : "header-close"}`}
       style={{ width: width }}
-      onClick={() => setIsMenuOpen(true)}>
+      // onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
       <Logo/>
       <Nav/>
       {isMenuOpen ? <Update/> : null}

@@ -1,9 +1,9 @@
 import React from 'react';
 import './ContentArchivement.css';
 import ArchivementItem from './ArchivementItem';
-import membersData from '../../assets/members-archivement.json';
-import customerData from '../../assets/customer-archivement.json';
-import activeData from '../../assets/active-archivement.json';
+import membersData from '../../../assets/members-archivement.json';
+import customerData from '../../../assets/customer-archivement.json';
+import activeData from '../../../assets/active-archivement.json';
 
 const ContentArchivement = () => {
   // Combine all achievement data into an array

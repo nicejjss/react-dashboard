@@ -1,7 +1,7 @@
 import './ContentTable.css';
 import ContentRow from './ContentRow';
 import { useEffect } from 'react';
-import { RepositoryFactory } from '../../assets/data/Repository/RepositoryFactory';
+import { RepositoryFactory } from '../../../assets/data/Repository/RepositoryFactory';
 
 function ContentTable({ filteredData, data , setData, page}) {
 

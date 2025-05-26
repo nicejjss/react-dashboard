@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import './ContentData.css';
-import Search from '../search/Search';
+import Search from '../../search/Search';
 import ContentTable from '../content-table/ContentTable';
 import ContentFooter from '../contentfooter/ContentFooter';
 
