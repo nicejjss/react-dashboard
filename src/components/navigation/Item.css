@@ -17,6 +17,7 @@
 }
 
 .nav-item-link {
+    border-radius: inherit;
     display: flex;
     align-items: center;
     width: 100%;
@@ -64,4 +65,17 @@
     padding-right: 0;
     margin-left: 0;
     margin-right: 0;
+}
+
+.active {
+    background-color: var(--secondary-background-color);
+    color: var(--secondary-text-color);
+}
+
+.active .nav-item-arrow {
+    filter: brightness(0) invert(1);
+}
+
+.active .nav-item-icon {
+    filter: brightness(0) invert(1);
 }

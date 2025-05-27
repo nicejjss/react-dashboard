@@ -2,7 +2,7 @@ import navArrow from '../../assets/icons/nav-arrow.svg'
 import './Item.css'
 import { MenuContext } from '../../Contexts';
 import { useContext } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Item({ index, item}) {
   const { isMenuOpen } = useContext(MenuContext);
